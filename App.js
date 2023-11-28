@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
+import AccountRecovery from './screens/AccountRecovery';
 import Main from './screens/Main';
 import Login from './screens/Login';
 import Register from './screens/Register';
+import LandingPage from './screens/LandingPage';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -17,7 +19,12 @@ export default function App() {
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar style="auto" />
         <NavigationContainer>
-          <Stack.Navigator>
+        <Stack.Navigator initialRouteName="LandingPage">
+          <Stack.Screen
+              options={{ headerShown: false }}
+              name="LandingPage"
+              component={LandingPage} 
+            />
             <Stack.Screen
               options={{ headerShown: false }}
               name="Login"
@@ -28,6 +35,11 @@ export default function App() {
               name="Register"
               component={Register}
             /><Stack.Screen
+            options={{ headerShown: false }}
+            name="AccountRecovery"
+            component={AccountRecovery}
+          />
+            <Stack.Screen
             options={{ headerShown: false }}
             name="Main"
             component={Main}

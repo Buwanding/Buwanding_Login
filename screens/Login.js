@@ -50,6 +50,22 @@ const Login = ({ navigation }) => {
       >
         Register
       </Button>
+      <Button
+        onPress={() => navigation.navigate("AccountRecovery")}
+        icon="account-box"
+        mode="contained"
+        style={{ marginTop: 10 }}
+      >
+        AccountRecovery
+      </Button>
+      <Button
+        onPress={() => navigation.navigate("LandingPage")}
+        icon="arrow-left"
+        mode="contained"
+        style={{ marginTop: 10 }}
+      >
+        Back
+      </Button>
     </View>
     </PaperProvider>
     
