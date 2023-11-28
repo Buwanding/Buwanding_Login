@@ -1,12 +1,18 @@
-import { StyleSheet, Text, View,TextInput, Button} from 'react-native'
+import { Button, Text, TextInput } from "react-native-paper";
 import React from 'react'
 
 const Login = () => {
   return (
     <View>
       <Text>Login</Text>
+      <TextInput
+        mode="outlined"
+        placeholder="Email"
+        label="Email"
+        style={{ marginTop: 10 }}
+        error={true}
+      />
       <TextInput></TextInput>
-      <Button></Button>
     </View>
   )
 }

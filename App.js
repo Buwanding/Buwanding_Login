@@ -7,7 +7,7 @@ export default function App() {
     <View style={styles.container}>
       <Login/>
       <Register/>
-      <Text>Open up App.js to start working on your app!</Text>
+      
       <StatusBar style="auto" />
     </View>
   );
