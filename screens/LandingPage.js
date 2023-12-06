@@ -13,7 +13,7 @@ const LandingPage = ({ navigation }) => {
   return (
     <PaperProvider theme={theme}>
       <View style={{ flex: 1,justifyContent: "center" }}>
-      <Text variant="displayMedium" style={{marginLeft: 90, marginBottom: 10, color: '#33cccc', fontWeight:
+      <Text variant="displayMedium" style={{textAlign:'center', marginBottom: 10, color: '#33cccc', fontWeight:
     'bold'}}>LandingPage</Text>
      
       <Button 

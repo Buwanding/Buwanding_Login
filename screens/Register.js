@@ -14,7 +14,7 @@ const Register = ({ navigation }) => {
   return (
     <PaperProvider theme={theme}>
         <View style={{ flex: 1, justifyContent: "center" }}>
-      <Text variant="displayMedium" style={{marginLeft: 140, marginBottom: 10, color: '#00008b', fontWeight:
+      <Text variant="displayMedium" style={{textAlign:'center', marginBottom: 10, color: '#00008b', fontWeight:
     'bold'}}>Register</Text>
       <TextInput
         mode="outlined"

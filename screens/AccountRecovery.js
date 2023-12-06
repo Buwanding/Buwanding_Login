@@ -13,7 +13,7 @@ const  AccountRecovery = ({ navigation }) => {
   return (
     <PaperProvider theme={theme}>
         <View style={{ flex: 1, justifyContent: "center" }}>
-      <Text variant="displayMedium" style={{marginLeft: 20, marginBottom: 10, color: '#FF6A6A', fontWeight:
+      <Text variant="displayMedium" style={{textAlign:'center', marginBottom: 10, color: '#FF6A6A', fontWeight:
     'bold'}}>AccountRecovery</Text>
       <TextInput
         mode="outlined"

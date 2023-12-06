@@ -14,7 +14,7 @@ const Login = ({ navigation }) => {
   return (
     <PaperProvider theme={theme}>
       <View style={{ flex: 1,justifyContent: "center" }}>
-      <Text variant="displayMedium" style={{marginLeft: 150, marginBottom: 10, color: '#00008b', fontWeight:
+      <Text variant="displayMedium" style={{textAlign:'center' , marginBottom: 10, color: '#00008b', fontWeight:
     'bold'}}>Login</Text>
       <TextInput
         mode="outlined"
