@@ -58,7 +58,8 @@ export default function Register({ navigation }) {
 
   return (
     <View styles={{ flex: 1 }}>
-      <Text variant="displayMedium">Register</Text>
+      <Text variant="displayMedium"style={{textAlign:'center' , marginBottom: 10, color: '#00008b', fontWeight:
+    'bold'}}>Register</Text>
       <TextInput
         mode="outlined"
         placeholder="Name"
