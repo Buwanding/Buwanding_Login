@@ -57,7 +57,7 @@ export default function Register({ navigation }) {
   };
 
   return (
-    <View styles={{ flex: 1 }}>
+    <View styles={{ flex: 1, justifyContent: "center"}}>
       <Text variant="displayMedium"style={{textAlign:'center' , marginBottom: 10, color: '#00008b', fontWeight:
     'bold'}}>Register</Text>
       <TextInput
