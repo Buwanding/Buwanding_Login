@@ -33,12 +33,11 @@ export default function Register({ navigation }) {
         return false;
       }
 
-      const url = "http://192.168.1.5/api/v1/register";
+      const url = "http://192.168.1.5:8000/api/v1/register";
       const data = {
         name,
         email,
         password,
-        password_confirmation: repassword,
       };
  
 
@@ -58,77 +57,77 @@ export default function Register({ navigation }) {
 
   return (
     <View styles={{ flex: 1, justifyContent: "center"}}>
-      <Text variant="displayMedium"style={{textAlign:'center' , marginBottom: 10, color: '#00008b', fontWeight:
-    'bold'}}>Register</Text>
-      <TextInput
-        mode="outlined"
-        placeholder="Name"
-        label="Name"
-        style={{ marginTop: 10 }}
-        value={name}
-        onChangeText={setName}
-        error={isError}
-      />
-      <TextInput
-        mode="outlined"
-        placeholder="Email"
-        label="Email"
-        style={{ marginTop: 10 }}
-        value={email}
-        onChangeText={setEmail}
-        error={isError}
-      />
-      <TextInput
-        mode="outlined"
-        placeholder="Password"
-        label="Password"
-        secureTextEntry={!showPass}
-        right={
-          <TextInput.Icon
-            icon={showPass ? "eye" : "eye-off"}
-            onPress={() => setShowPass(!showPass)}
+          <Text variant="displayMedium"style={{textAlign:'center' , marginBottom: 10, color: '#00008b', fontWeight:
+        'bold'}}>Register</Text>
+          <TextInput
+            mode="outlined"
+            placeholder="Name"
+            label="Name"
+            style={{ marginTop: 10 }}
+            value={name}
+            onChangeText={setName}
+            error={isError}
           />
-        }
-        style={{ marginTop: 10 }}
-        value={password}
-        onChangeText={setPassword}
-        error={isError}
-      />
-      <TextInput
-        mode="outlined"
-        placeholder="Re-type Password"
-        label="Re-type Password"
-        secureTextEntry={!showRePass}
-        right={
-          <TextInput.Icon
-            icon={showPass ? "eye" : "eye-off"}
-            onPress={() => setShowRePass(!showRePass)}
+          <TextInput
+            mode="outlined"
+            placeholder="Email"
+            label="Email"
+            style={{ marginTop: 10 }}
+            value={email}
+            onChangeText={setEmail}
+            error={isError}
           />
-        }
-        style={{ marginTop: 10 }}
-        value={repassword}
-        onChangeText={setRepassword}
-        error={isError}
-      />
-      <Button
-        disabled={loading}
-        loading={loading}
-        icon="account-plus"
-        mode="contained"
-        style={{ marginTop: 10 }}
-        onPress={handleRegistration}
-      >
-        Register
-      </Button>
-      <Button
-        disabled={loading}
-        onPress={() => navigation.pop()}
-        icon="arrow-left"
-        mode="contained"
-        style={{ marginTop: 10 }}
-      >
-        Go Back
-      </Button>
+          <TextInput
+            mode="outlined"
+            placeholder="Password"
+            label="Password"
+            secureTextEntry={!showPass}
+            right={
+              <TextInput.Icon
+                icon={showPass ? "eye" : "eye-off"}
+                onPress={() => setShowPass(!showPass)}
+              />
+            }
+            style={{ marginTop: 10 }}
+            value={password}
+            onChangeText={setPassword}
+            error={isError}
+          />
+          <TextInput
+            mode="outlined"
+            placeholder="Re-type Password"
+            label="Re-type Password"
+            secureTextEntry={!showRePass}
+            right={
+              <TextInput.Icon
+                icon={showPass ? "eye" : "eye-off"}
+                onPress={() => setShowRePass(!showRePass)}
+              />
+            }
+            style={{ marginTop: 10 }}
+            value={repassword}
+            onChangeText={setRepassword}
+            error={isError}
+          />
+          <Button
+            disabled={loading}
+            loading={loading}
+            icon="account-plus"
+            mode="contained"
+            style={{ marginTop: 10 }}
+            onPress={handleRegistration}
+          >
+            Register
+          </Button>
+          <Button
+            disabled={loading}
+            onPress={() => navigation.pop()}
+            icon="arrow-left"
+            mode="contained"
+            style={{ marginTop: 10 }}
+          >
+            Go Back
+          </Button>
     </View>
   );
 }

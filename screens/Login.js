@@ -21,7 +21,7 @@ const Login = ({ navigation }) => {
   
   const handleLogin = async (values) => {
     try { 
-      const url = "http://192.168.1.5/api/v1/login";
+      const url = "http://192.168.1.5:8000/api/v1/login";
       const result = await fetchServices.postData(url, values);
 
       if (result.message != null) {
@@ -62,6 +62,17 @@ const Login = ({ navigation }) => {
       }) => {
         return(
             <PaperProvider theme={theme}>
+              <View>
+              <Button
+                      disabled={isSubmitting}
+                      onPress={() => navigation.navigate("LandingPage")}
+                      icon="arrow-left"
+                      mode="contained"
+                      style={{ marginTop: 10 }}
+                  >
+                      Back
+                  </Button>
+              </View>
               <View style={{ flex: 1,justifyContent: "center" }}>
                   <Text 
                       variant="displayMedium" 
@@ -141,15 +152,7 @@ const Login = ({ navigation }) => {
                   >
                       AccountRecovery
                   </Button>
-                  <Button
-                      disabled={isSubmitting}
-                      onPress={() => navigation.navigate("LandingPage")}
-                      icon="arrow-left"
-                      mode="contained"
-                      style={{ marginTop: 10 }}
-                  >
-                      Back
-                  </Button>
+                  
             </View>
             </PaperProvider>
         );
